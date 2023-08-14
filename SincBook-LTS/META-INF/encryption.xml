@@ -1,0 +1,35 @@
+<encryption
+    xmlns ="urn:oasis:names:tc:opendocument:xmlns:container"
+    xmlns:enc="http://www.w3.org/2001/04/xmlenc#"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <enc:EncryptedKey Id="EK">
+        <enc:EncryptionMethod
+            Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+        <ds:KeyInfo>
+            <ds:KeyName>
+                Sinc
+            </ds:KeyName>
+        </ds:KeyInfo>
+    </enc:EncryptedKey>
+    <enc:EncryptedData Id="ED1">
+        <enc:EncryptionMethod
+            Algorithm="http://www.w3.org/2001/04/xmlenc#Kw-aes128"/>
+        <ds:KeyInfo>
+            <ds:RetrievalMethod
+                URI="#EK"
+                Type="http://www.w3.org/2001/04/xmlenc#EncryptedKey"/>
+        </ds:KeyInfo>
+        <enc:CipherData>
+            <enc:CipherReference
+                URI='EPUB/book'/>
+        </enc:CipherData>
+        <enc:CipherData>
+            <enc:CipherReference
+                URI='EPUB/images'/>
+        </enc:CipherData>
+        <enc:CipherData>
+            <enc:CipherReference
+                URI='EPUB/style'/>
+        </enc:CipherData>
+    </enc:EncryptedData>
+</encryption>
