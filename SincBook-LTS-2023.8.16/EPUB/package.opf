@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package 
+    xml:lang="ja" 
+    xmlns="http://www.idpf.org/2007/opf" 
+    unique-identifier="pub-id"
+    version="3.0">
+    <metadata 
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="pub-id">
+            urn:uuid:A1B0D67E-2E81-4DF5-9E67-A64CBE366809
+        </dc:identifier>
+        <dc:title id="pub-title">
+            My_Sinc_Book_Title
+        </dc:title>
+        <meta refines="#pub-title" property="file-as">
+            イノチノヒ
+        </meta>
+        <dc:language>
+            ja
+        </dc:language>
+        <dc:creator id="creator">
+            Sinc-Creaor
+        </dc:creator>        
+        <meta refines="creator" property="alternate-script" xml:lang="ja">
+            Sinc-Creaor
+        </meta>
+        <meta refines="#creator" property="role" scheme="marc:relators" id="role">
+            aut
+        </meta>
+        <meta refines="#creator" property="file-as">
+            Tanaka,Ryota
+        </meta>
+        <meta refines="#creator" property="display-seq">
+            1
+        </meta>
+        <dc:date>
+            2023-7-02T14:01:30Z
+        </dc:date>
+        <dc:subject id="subject">
+            FICTION/General
+        </dc:subject>
+        <meta refines="#subject" property="authority">
+            BISAC
+        </meta>
+        <meta refines="#subject" property="term">
+            FIC000000
+        </meta>
+        <dc:publisher id="publisher">
+            Sinc
+        </dc:publisher>
+        <meta refines="#publisher" property="file-as">
+            シンク
+        </meta>
+        <meta property="dcterms:modified">
+            2023-06-27T15:01:00Z
+        </meta>
+        <meta property="W3C:Recommendaion">
+            EPUB3.3
+        </meta>
+    </metadata>
+    <manifest>
+        <item properties="nav"
+            id="nav" href="nav.html" media-type="application/xhtml+xml"/>
+        <item id="cover-pic"
+            href="book/1-cover.html" media-type="application/xhtml+xml"/>
+        <item id="title"
+            href="book/2-title.html" media-type="application/xhtml+xml"/>
+        <item id="toc"
+            href="book/3-toc.html" media-type="application/xhtml+xml"/>
+        <item id="content"
+            href="book/4-content.html" media-type="application/xhtml+xml"/>
+        <item id="right"
+            href="book/5-right.html" media-type="application/xhtml+xml"/>
+        <item id="colophon"
+            href="book/6-colophon.html" media-type="application/xhtml+xml"/>
+        <item id="style"
+            href="style/style.css" media-type="text/css"/>
+        <item properties="cover-image"
+            id="cover" media-type="image/jpeg" href="images/cover-pic.jpg"/> 
+    </manifest>
+    <spine page-progression-direction="ltr">
+        <itemref linear="yes" idref="cover-pic" properties="page-spread-left"/>
+        <itemref linear="yes" idref="title" properties="page-spread-left"/>
+        <itemref linear="yes" idref="toc" properties="page-spread-left"/>
+        <itemref linear="yes" idref="content" properties="page-spread-left"/>
+        <itemref linear="yes" idref="right" properties="page-spread-left"/>
+        <itemref linear="yes" idref="colophon" properties="rendition:page-spread-left"/>
+    </spine>
+</package>
